@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator
 from django.core.exceptions import ValidationError
 
+
+
 # Create your models here.
 # def validate_min_value(value): #otra forma de validad en el modelo
 #     if value < 0:
@@ -20,9 +22,9 @@ class Inmueble(models.Model):
     id_usuario = models.ForeignKey('auth.User', on_delete=models.CASCADE)
 
     nombre_inmueble = models.CharField(max_length=100, null=False, blank=False)    
-    #descripcion = models.CharField(max_length=100, null=False, blank=False)
-    m2_contruidos = models.FloatField()
-    #m2_totales = models.IntegerField() 
+    descripcion = models.TextField(null=False, blank=False, default='')
+    m2_construidos = models.FloatField(null=False, default=0.0)
+    m2_totales = models.FloatField(null=False, default=0.0)
     cantidad_estacionamientos = models.PositiveIntegerField(default=0)
     cantidad_habitaciones = models.PositiveIntegerField(default=0)
     cantidad_baños = models.PositiveIntegerField(default=0)
@@ -37,43 +39,24 @@ class Inmueble(models.Model):
         return self.nombre_inmueble
 
 class Region(models.Model):
-    CHOICES = [
-        ('Región de Arica y Parinacota','Arica y Parinacota'),
-        ('Región de Tarapacá', 'Tarapacá'),
-        ('Región de Antofagasta', 'Antofagasta'),
-        ('Región de Atacama', 'Atacama'),
-        ('Región de Coquimbo', 'Coquimbo'),
-        ('Región de Valparaíso', 'Valparaiso'),
-        ('Región Metropolitana de Santiago', 'RM'),
-        ('Región Libertador General Bernardo O’Higgins', 'Libertador Bdo OHiggins'),
-        ('Región del Maule','Maule'),
-        ('Región del Ñuble', 'Ñuble'),
-        ('Región del Biobío','Bio Bio'),
-        ('Región de La Araucanía','Araucania'),
-        ('Región de Los Ríos','Los Rios'),
-        ('Región de Los Lagos', 'Los Lagos'),
-        ('Región de Aysén del General Carlos Ibáñez del Campo', 'Aysén'),
-        ('Región de Magallanes y la Antártica Chilena', 'Magallanes'),
-    ]
-
-    region = models.TextField(choices=CHOICES)
-
+    region = models.CharField()
     def __str__(self):
         return self.region
 
+
+
 class Comuna(models.Model):
     comuna  = models.CharField()
-
     def __str__(self):
         return self.comuna 
 
 class Tipo_de_inmueble(models.Model): #dpto, casa, parcela
-    CHOICES = [
-        ('Departamento', 'Departamento'),
-        ('Casa', 'Casa'),
-        ('Parcela', 'Parcela'),
-    ]
-    tipo_de_inmueble = models.TextField(choices=CHOICES, unique=True)
+    # CHOICES = [
+    #     ('Departamento', 'Departamento'),
+    #     ('Casa', 'Casa'),
+    #     ('Parcela', 'Parcela'),
+    # ]
+    tipo_de_inmueble = models.TextField()
 # ID 1. Dpto 2. Casa 3. Parcela
     def __str__(self):
         return self.tipo_de_inmueble

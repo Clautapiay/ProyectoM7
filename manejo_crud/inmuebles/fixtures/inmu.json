@@ -1,0 +1,53 @@
+[
+    {
+        "model": "inmuebles.inmueble",
+        "pk": 1,
+        "fields": {
+            "id_usuario": 3,
+            "id_tipo_de_inmueble": 1,
+            "id_comuna": 6,
+            "id_region": 1,
+            "nombre_inmueble": "Departamento 1: Lugar Feliz",
+            "m2_construidos": 100.0,
+            "m2_totales": 150.0,
+            "cantidad_baños": 1,
+            "cantidad_habitaciones": 2,
+            "cantidad_estacionamientos": 2,
+            "descripcion":"Explora la alegría y la felicidad en este encantador departamento disponible para arriendo. Departamento 1 te da la bienvenida a un lugar donde la felicidad se hace hogar. Con un ambiente acogedor y vibrante, este espacio te invita a crear recuerdos inolvidables y a disfrutar de la alegría de la vida cotidiana. Descubre la felicidad en cada rincón de este hogar.",
+            "direccion": "Las loicas 3000"}
+            },
+    {
+        "model": "inmuebles.inmueble",
+        "pk": 2,
+        "fields": {
+            "id_usuario": 2,
+            "id_tipo_de_inmueble": 3,
+            "id_comuna": 8,
+            "id_region": 5,
+            "nombre_inmueble": "Parcela Dulces Sueños",
+            "m2_construidos": 500.0,
+            "m2_totales": 1000.0,
+            "cantidad_baños": 4,
+            "cantidad_habitaciones": 6,
+            "cantidad_estacionamientos": 5,
+            "descripcion":"Sumérgete en un oasis de dulces sueños en esta encantadora parcela disponible para arriendo. Parcela 'Dulces Sueños' te ofrece un escape tranquilo y sereno donde tus sueños más dulces se hacen realidad. Con vistas panorámicas y un entorno natural encantador, este espacio es perfecto para relajarse, desconectar y disfrutar de un descanso reparador. Deja que la magia de este lugar te lleve a un mundo de tranquilidad y serenidad, donde cada momento es una delicia para el alma.",
+            "direccion": "Av DulcesSueños 123123"}
+            },
+    {
+        "model": "inmuebles.inmueble",
+        "pk": 3,
+        "fields": {
+            "id_usuario": 4,
+            "id_tipo_de_inmueble": 2,
+            "id_comuna": 4,
+            "id_region": 4,
+            "nombre_inmueble": "Casa 1: Tranquilidad",
+            "m2_construidos": 110.0,
+            "m2_totales": 220.0,
+            "cantidad_baños": 2,
+            "cantidad_habitaciones": 4,
+            "cantidad_estacionamientos": 2,
+            "descripcion":"Descubre la serenidad y la calma en esta encantadora casa disponible para arriendo. Casa 1 te ofrece un refugio tranquilo y acogedor, donde podrás disfrutar de momentos de paz y relajación. Sumérgete en un ambiente armonioso y disfruta de la tranquilidad que este hogar tiene para ofrecerte.",
+            "direccion": "TranquiTranquila 333"}
+    }
+]

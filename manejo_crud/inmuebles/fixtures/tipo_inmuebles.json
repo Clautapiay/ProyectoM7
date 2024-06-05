@@ -1,0 +1,26 @@
+[
+    {
+        "model": "inmuebles.Tipo_de_inmueble",
+        "pk": 1,
+        "fields": {
+            "id": 1,
+            "tipo_de_inmueble": "Departamento"
+        }
+    },
+    {
+        "model": "inmuebles.Tipo_de_inmueble",
+        "pk": 2,
+        "fields": {
+            "id": 2,
+            "tipo_de_inmueble": "Casa"
+        }
+    },
+    {
+        "model": "inmuebles.Tipo_de_inmueble",
+        "pk": 3,
+        "fields": {
+            "id": 3,
+            "tipo_de_inmueble": "Parcela"
+        }
+    }
+]

@@ -1,0 +1,130 @@
+[
+    {
+        "model": "inmuebles.Region",
+        "pk": 1,
+        "fields": {
+            "id": 1,
+            "region": "Arica y Parinacota"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 2,
+        "fields": {
+            "id": 2,
+            "region": "Tarapacá"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 3,
+        "fields": {
+            "id": 3,
+            "region": "Antofagasta"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 4,
+        "fields": {
+            "id": 4,
+            "region": "Atacama"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 5,
+        "fields": {
+            "id": 5,
+            "region": "Coquimbo"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 6,
+        "fields": {
+            "id": 6,
+            "region": "Valparaíso"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 7,
+        "fields": {
+            "id": 7,
+            "region": "Región del Libertador Gral. Bernardo O’Higgins"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 8,
+        "fields": {
+            "id": 8,
+            "region": "Región del Maule"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 9,
+        "fields": {
+            "id": 9,
+            "region": "Región de Ñuble"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 10,
+        "fields": {
+            "id": 10,
+            "region": "Región del Biobío"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 11,
+        "fields": {
+            "id": 11,
+            "region": "Región de la Araucanía"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 12,
+        "fields": {
+            "id": 12,
+            "region": "Región de Los Ríos"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 13,
+        "fields": {
+            "id": 13,
+            "region": "Región de Los Lagos"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 14,
+        "fields": {
+            "id": 14,
+            "region": "Región Aisén del Gral. Carlos Ibáñez del Campo"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 15,
+        "fields": {
+            "id": 15,
+            "region": "Región de Magallanes y de la Antártica Chilena"
+        }
+    },
+    {
+        "model": "inmuebles.Region",
+        "pk": 16,
+        "fields": {
+            "id": 16,
+            "region": "Región Metropolitana de Santiago"
+        }
+    }
+]
