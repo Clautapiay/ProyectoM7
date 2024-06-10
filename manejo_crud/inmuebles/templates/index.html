@@ -1,25 +1,24 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>PortaL</title>
-    </head>
-    <body>
-        {% if user.is_authenticated %}
-            {% block content %}
-
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+            {{ user.username }}
             {% for i in inmuebles %}
             <ul>
                 <li>{{i.nombre_inmueble}}</li>
                 <li>{{i.id_region.region}}</li>
                 <li>{{i.id_comuna.comuna}}</li>
             </ul>
+
             {% endfor %}
                 <a href="{% url 'logout' %}">Logout</a>
-            {% endblock content %}
             
 
+
         {% else %}
-            <a href="{% url 'login_url' %}">Login</a>
-        {% endif %}
-    </body>
-</html>
+
+        
+        <h1> Debes iniciar sesión para acceder al contenido </h1>
+        <a href="{% url 'login_url' %}">Login</a>
+
+{% endif %}
+{% endblock content %}

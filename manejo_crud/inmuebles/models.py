@@ -32,8 +32,7 @@ class Inmueble(models.Model):
     id_comuna = models.ForeignKey('Comuna', on_delete=models.CASCADE)
     id_region = models.ForeignKey('Region', on_delete=models.CASCADE)
     id_tipo_de_inmueble = models.ForeignKey('Tipo_de_inmueble', on_delete=models.CASCADE) #casa/depto/parcela
-
-    #precio_mensual_arriendo = models.CharField(max_length=50, null=False, blank=False)
+    precio_mensual_arriendo = models.CharField(max_length=100, null=False, blank=False)
 
     def __str__(self):
         return self.nombre_inmueble
@@ -70,15 +69,16 @@ class Tipo_de_usuario(models.Model): #arrendatario -- arrendador
 
     def __str__(self):
         return self.tipo_de_usuario
+        #(self.pk) +'-'+
 
 class Perfil(models.Model): #para interactuar
     usuario = models.OneToOneField('auth.User', on_delete=models.CASCADE)
-    rut = models.CharField(max_length=9, primary_key=True, null=False)
+    rut = models.CharField(max_length=50, primary_key=True, null=False)
     nombres = models.CharField(max_length=100, null=False, blank=False)
     apellidos = models.CharField(max_length=100, null=False, blank=False)
     direccion = models.CharField(max_length=100, null=False, blank=False)
-    telefono_personal = models.CharField(max_length=9)
-    correo_electronico = models.CharField(max_length=10)
+    telefono_personal = models.CharField(max_length=50)
+    correo_electronico = models.CharField(max_length=50)
     tipo_de_usuario = models.ForeignKey('Tipo_de_usuario', on_delete=models.CASCADE) #arrendatario/arrendador
 
     def __str__(self):

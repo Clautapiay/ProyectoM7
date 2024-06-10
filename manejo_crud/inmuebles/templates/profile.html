@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Perfil {{user.username}} </h1>  
+
+<p>
+{% if not perfil %}
+    <h3>NO SE ENCONTRÓ UN PERFIL ASOCIADO A ESTE USUARIO</h3>
+    <a href="{% url 'register_profile' %}" class="btn btn-primary mx-2">Crea tu perfil :] </a>
+
+{% else %}
+
+<ul>
+    <li>Nombre : {{user.first_name}} {{user.last_name}}</li>
+    <li>Tipo de usuario : {{perfil.tipo_de_usuario}}</li>
+    <li>RUT : {{perfil.rut}}</li>
+    <li>Direccion : {{perfil.direccion}}</li>
+    <li>Telefono : {{perfil.telefono_personal}}</li>
+    <li>Correo : {{perfil.correo_electronico}}</li>
+</ul>
+
+<a href="{% url 'update_profile' %}" class="btn btn-primary">Actualiza tu perfil :O </a>
+{% endif %}
+
+</p>
+
+{% endblock content%}
