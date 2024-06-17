@@ -83,3 +83,15 @@ class Perfil(models.Model): #para interactuar
 
     def __str__(self):
         return self.usuario.username    
+    
+
+class Contact(models.Model):
+    arrendador = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    nombre_inmueble = models.CharField()
+    correo = models.EmailField()
+    nombre = models.CharField(max_length=64)
+    mensaje = models.TextField()
+
+    def __str__(self):
+        return f"{self.correo} - Mensaje: {self.mensaje}"
+    

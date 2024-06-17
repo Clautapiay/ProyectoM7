@@ -2,16 +2,21 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
     {% load static %}
-      <a class="navbar-brand" href="http://127.0.0.1:8000/"><img src= '' alt="logo2" height="50px"</a>
+      <a class="navbar-brand" href="http://127.0.0.1:8000/"><img src= "{% static '/img/casa.jpg' %}" alt="logo2" height="50px"</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-link active" aria-current="page" href="http://127.0.0.1:8000/">Inicio</a>
-          <a class="nav-link" href="http://127.0.0.1:8000/bienvenidos/">Bienvenido</a>
-          <a class="nav-link" href="http://127.0.0.1:8000/acerca/">Acerca</a>
-          <a class="nav-link" href="http://127.0.0.1:8000/contacto/">Contacto</a>
+          
+          {% if tipo == 'Arrendador' %}
+            <a class="nav-link active" aria-current="page" href="{% url 'get_inmuebles'%}">Propiedades</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/register_inmueble/">Registrar una propiedad</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'mensaje'%}">Mensajes</a>
+            {% else %}
+          <a class="nav-link active" aria-current="page" href="{% url 'index'%}">Arriendos Disponibles</a>
+          {% endif %}
+          <a class="nav-link" href="http://127.0.0.1:8000/profile/">Mi Perfil</a>
         
           {% if user.is_authenticated %}
             <form method="post" action="{% url 'logout' %}">
